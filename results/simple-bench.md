@@ -4,8 +4,8 @@ Page and method: [simple-bench/README.md](../simple-bench/README.md).
 
 | App | JS files (/) | First Load JS raw | First Load JS gzip |
 | --- | --- | --- | --- |
-| astralis | 6 | 493.3 kB | 147.6 kB |
-| astralis (empty route floor) | 5 | 452.3 kB | 134.6 kB |
+| astralis | 6 | 505.8 kB | 151.1 kB |
+| astralis (empty route floor) | 5 | 453.0 kB | 134.8 kB |
 | baseline | 5 | 441.0 kB | 129.8 kB |
 | chakra | 7 | 787.1 kB | 224.3 kB |
 | mui | 7 | 625.7 kB | 187.8 kB |
