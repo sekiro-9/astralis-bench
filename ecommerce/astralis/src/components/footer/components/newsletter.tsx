@@ -43,7 +43,7 @@ export function Newsletter() {
         ) : (
           <Stack gap="3.5">
             <InputGroup prefix={<Icon as={MailIcon} size="sm" color="subtle" />}>
-              <Input type="email" required placeholder="Enter your email address" aria-label="Email address" />
+              <Input type="email" rounded="full" required placeholder="Enter your email address" aria-label="Email address" />
             </InputGroup>
             <Button type="submit" variant="subtle" colorScheme="gray" rounded="full" fullWidth>
               Subscribe to Newsletter

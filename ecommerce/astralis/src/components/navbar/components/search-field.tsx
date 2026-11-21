@@ -7,6 +7,7 @@ export function SearchField() {
       <Input
         type="search"
         variant="filled"
+        rounded="full"
         placeholder="Search for products..."
         aria-label="Search for products"
       />
