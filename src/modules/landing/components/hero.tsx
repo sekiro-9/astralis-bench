@@ -26,11 +26,12 @@ export function Hero() {
                 lineHeight="tight"
                 casing="uppercase"
                 maxW="11em"
-                animation="fade-up"
+                animation="slide-right"
+                animationDuration="slow"
               >
                 {hero.title}
               </Heading>
-              <Text color="muted" size={{ base: "sm", lg: "md" }} maxW="34rem" animation="fade-up" animationDelay="100">
+              <Text color="muted" size={{ base: "sm", lg: "md" }} maxW="34rem" animation="fade-up" animationDuration="slow" animationDelay="200">
                 {hero.description}
               </Text>
               <Button
@@ -40,12 +41,13 @@ export function Hero() {
                 size="lg"
                 rounded="full"
                 w={{ base: "full", md: "13rem" }}
-                animation="fade-up"
-                animationDelay="200"
+                animation="pop"
+                animationDuration="slow"
+                animationDelay="300"
               >
                 {hero.action.label}
               </Button>
-              <Box pt={{ base: "0", lg: "4" }} animation="fade-up" animationDelay="300">
+              <Box pt={{ base: "0", lg: "4" }} animation="fade-up" animationDuration="slow" animationDelay="500">
                 <HeroStats stats={hero.stats} />
               </Box>
             </Stack>
@@ -61,7 +63,7 @@ export function Hero() {
               src={hero.image.src}
               alt={hero.image.alt}
               loading="eager"
-              animation="fade-in"
+              animation="scale-in"
               animationDuration="slow"
               objectFit="cover"
               position="absolute"
@@ -76,7 +78,8 @@ export function Hero() {
               size={{ base: "4.75rem", lg: "6.5rem" }}
               color="base"
               animation="pop"
-              animationDelay="500"
+              animationDuration="slow"
+              animationDelay="700"
             >
               <SparkleIcon aria-hidden width="100%" height="100%" />
             </Box>
@@ -87,7 +90,8 @@ export function Hero() {
               size={{ base: "11", lg: "14" }}
               color="base"
               animation="pop"
-              animationDelay="700"
+              animationDuration="slow"
+              animationDelay="1000"
             >
               <SparkleIcon aria-hidden width="100%" height="100%" />
             </Box>

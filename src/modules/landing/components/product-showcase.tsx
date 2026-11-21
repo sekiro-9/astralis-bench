@@ -17,9 +17,9 @@ export function ProductShowcase({ title, products, viewAllHref }: ProductShowcas
       <PageContainer>
         <Stack gap={{ base: "8", lg: "14" }} alignItems="center">
           <SectionHeading>{title}</SectionHeading>
-          <Box w="full" reveal="fade-up">
+          <Box w="full" reveal="slide-left">
             <ScrollArea direction="horizontal" hideScrollbar>
-              <Flex as="ul" gap={{ base: "4", lg: "5" }}>
+              <Flex as="ul" gap={{ base: "4", lg: "5" }} py="3">
                 {products.map((product) => (
                   <Box as="li" key={product.id} basis={{ base: "12.5rem", lg: "0" }} grow="1" shrink="0" minW="0">
                     <ProductCard product={product} />

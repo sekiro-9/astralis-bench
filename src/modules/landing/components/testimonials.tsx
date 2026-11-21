@@ -25,7 +25,7 @@ export function Testimonials() {
                 <Carousel.Next icon={<Icon as={ArrowRightIcon} size="md" />} />
               </HStack>
             </Flex>
-            <Box reveal="fade-up">
+            <Box reveal="slide-left">
               <Carousel.Track>
                 {testimonials.map((testimonial) => (
                   <Carousel.Slide key={testimonial.id}>

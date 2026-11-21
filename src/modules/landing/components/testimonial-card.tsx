@@ -4,7 +4,7 @@ import type { Testimonial } from "@/data/landing";
 
 export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <Card variant="outline" size="lg">
+    <Card variant="outline" size="lg" hoverable>
       <Card.Body>
         <Stack gap={{ base: "3", lg: "4" }}>
           <Rating value={testimonial.rating} readOnly size="md" />

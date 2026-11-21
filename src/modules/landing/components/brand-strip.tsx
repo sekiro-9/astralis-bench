@@ -12,7 +12,7 @@ export function BrandStrip() {
           justifyContent={{ base: "center", lg: "between" }}
           columnGap={{ base: "8", lg: "6" }}
           rowGap="6"
-          reveal="fade-in"
+          reveal="blur-in"
         >
           {brands.map((brand) => (
             <Image

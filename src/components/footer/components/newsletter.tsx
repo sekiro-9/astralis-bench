@@ -22,7 +22,7 @@ export function Newsletter() {
       rounded="3xl"
       px={{ base: "6", lg: "16" }}
       py={{ base: "8", lg: "9" }}
-      reveal="fade-up"
+      reveal="scale-in"
     >
       <Heading
         as="h2"
