@@ -13,6 +13,7 @@ export function DressStyleTile({ style }: { style: DressStyle }) {
       rounded="3xl"
       bg="base"
       h={{ base: "12rem", lg: "18rem" }}
+      reveal="scale-in"
     >
       <Image src={style.image} alt="" objectFit="cover" position="absolute" inset="0" h="full" w="full" />
       <Text

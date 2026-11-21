@@ -3,14 +3,14 @@ import { Box, Button, Grid, GridItem, Heading, Image, Stack, Text } from "astral
 import { SparkleIcon } from "@/components/icons";
 import { PageContainer } from "@/components/page-container";
 import { hero } from "@/data/landing";
+import { surfaces } from "@/theme";
 import { HeroStats } from "./hero-stats";
 
-const HERO_BACKGROUND = "#f2f0f1";
 const HERO_GUTTER = { base: "4", md: "8", lg: "16", xl: "7rem" } as const;
 
 export function Hero() {
   return (
-    <Box as="section" bg={HERO_BACKGROUND} overflow="hidden">
+    <Box as="section" bg={surfaces.hero} overflow="hidden">
       <PageContainer maxW="80rem" px={HERO_GUTTER}>
         <Grid columns={{ base: "1", lg: "12" }} gap="0">
           <GridItem colSpan={{ base: "1", lg: "7" }}>
@@ -26,10 +26,11 @@ export function Hero() {
                 lineHeight="tight"
                 casing="uppercase"
                 maxW="11em"
+                animation="fade-up"
               >
                 {hero.title}
               </Heading>
-              <Text color="muted" size={{ base: "sm", lg: "md" }} maxW="34rem">
+              <Text color="muted" size={{ base: "sm", lg: "md" }} maxW="34rem" animation="fade-up" animationDelay="100">
                 {hero.description}
               </Text>
               <Button
@@ -39,10 +40,12 @@ export function Hero() {
                 size="lg"
                 rounded="full"
                 w={{ base: "full", md: "13rem" }}
+                animation="fade-up"
+                animationDelay="200"
               >
                 {hero.action.label}
               </Button>
-              <Box pt={{ base: "0", lg: "4" }}>
+              <Box pt={{ base: "0", lg: "4" }} animation="fade-up" animationDelay="300">
                 <HeroStats stats={hero.stats} />
               </Box>
             </Stack>
@@ -58,6 +61,8 @@ export function Hero() {
               src={hero.image.src}
               alt={hero.image.alt}
               loading="eager"
+              animation="fade-in"
+              animationDuration="slow"
               objectFit="cover"
               position="absolute"
               inset="0"
@@ -70,6 +75,8 @@ export function Hero() {
               right={{ base: "1.25rem", lg: "4%" }}
               size={{ base: "4.75rem", lg: "6.5rem" }}
               color="base"
+              animation="pop"
+              animationDelay="500"
             >
               <SparkleIcon aria-hidden width="100%" height="100%" />
             </Box>
@@ -79,6 +86,8 @@ export function Hero() {
               left={{ base: "1.75rem", lg: "5%" }}
               size={{ base: "11", lg: "14" }}
               color="base"
+              animation="pop"
+              animationDelay="700"
             >
               <SparkleIcon aria-hidden width="100%" height="100%" />
             </Box>

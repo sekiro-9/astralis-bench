@@ -15,6 +15,7 @@ export function SectionHeading({ children, align = "center" }: SectionHeadingPro
       lineHeight="none"
       casing="uppercase"
       align={align === "center" ? "center" : "left"}
+      reveal="fade-up"
     >
       {children}
     </Heading>

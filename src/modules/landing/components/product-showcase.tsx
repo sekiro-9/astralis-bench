@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import { Box, Button, Flex, Stack } from "astralis-ui";
+import { Box, Button, Flex, ScrollArea, Stack } from "astralis-ui";
 import { PageContainer } from "@/components/page-container";
 import { ProductCard } from "@/components/product-card";
 import { SectionHeading } from "@/components/section-heading";
@@ -17,13 +17,17 @@ export function ProductShowcase({ title, products, viewAllHref }: ProductShowcas
       <PageContainer>
         <Stack gap={{ base: "8", lg: "14" }} alignItems="center">
           <SectionHeading>{title}</SectionHeading>
-          <Flex as="ul" gap={{ base: "4", lg: "5" }} overflowX={{ base: "auto", lg: "visible" }} w="full" pb="1">
-            {products.map((product) => (
-              <Box as="li" key={product.id} basis={{ base: "12.5rem", lg: "0" }} grow="1" shrink="0" minW="0">
-                <ProductCard product={product} />
-              </Box>
-            ))}
-          </Flex>
+          <Box w="full" reveal="fade-up">
+            <ScrollArea direction="horizontal" hideScrollbar>
+              <Flex as="ul" gap={{ base: "4", lg: "5" }}>
+                {products.map((product) => (
+                  <Box as="li" key={product.id} basis={{ base: "12.5rem", lg: "0" }} grow="1" shrink="0" minW="0">
+                    <ProductCard product={product} />
+                  </Box>
+                ))}
+              </Flex>
+            </ScrollArea>
+          </Box>
         </Stack>
         <Flex justifyContent="center" mt={{ base: "6", lg: "9" }}>
           <Button

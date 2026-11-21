@@ -25,13 +25,15 @@ export function Testimonials() {
                 <Carousel.Next icon={<Icon as={ArrowRightIcon} size="md" />} />
               </HStack>
             </Flex>
-            <Carousel.Track>
-              {testimonials.map((testimonial) => (
-                <Carousel.Slide key={testimonial.id}>
-                  <TestimonialCard testimonial={testimonial} />
-                </Carousel.Slide>
-              ))}
-            </Carousel.Track>
+            <Box reveal="fade-up">
+              <Carousel.Track>
+                {testimonials.map((testimonial) => (
+                  <Carousel.Slide key={testimonial.id}>
+                    <TestimonialCard testimonial={testimonial} />
+                  </Carousel.Slide>
+                ))}
+              </Carousel.Track>
+            </Box>
           </Stack>
         </Carousel>
       </PageContainer>
