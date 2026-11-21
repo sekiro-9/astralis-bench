@@ -5,16 +5,12 @@ import { AstralisDevTools } from "astralis-devtools/next";
 import { satoshi, unbounded } from "@/assets/fonts";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { themeTokens } from "@/theme";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "SHOP.CO",
   description: "Find clothes that match your style.",
-};
-
-const themeTokens = {
-  fontBody: "var(--font-satoshi), ui-sans-serif, system-ui, sans-serif",
-  fontHeading: "var(--font-unbounded), ui-sans-serif, system-ui, sans-serif",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

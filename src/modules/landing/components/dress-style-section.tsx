@@ -2,9 +2,8 @@ import { Box, Grid, GridItem, Stack } from "astralis-ui";
 import { PageContainer } from "@/components/page-container";
 import { SectionHeading } from "@/components/section-heading";
 import { dressStyles } from "@/data/landing";
+import { surfaces } from "@/theme";
 import { DressStyleTile } from "./dress-style-tile";
-
-const SECTION_BACKGROUND = "#f0f0f0";
 
 export function DressStyleSection() {
   return (
@@ -12,7 +11,7 @@ export function DressStyleSection() {
       <PageContainer>
         <Stack
           gap={{ base: "7", lg: "16" }}
-          bg={SECTION_BACKGROUND}
+          bg={surfaces.panel}
           rounded={{ base: "3xl", lg: "2.5rem" }}
           px={{ base: "6", lg: "16" }}
           py={{ base: "10", lg: "16" }}

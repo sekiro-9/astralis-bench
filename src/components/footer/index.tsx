@@ -2,12 +2,12 @@ import { Box, Flex, Grid, GridItem, Separator, Stack, Text } from "astralis-ui";
 import { Logo } from "@/components/logo";
 import { PageContainer } from "@/components/page-container";
 import { copyright, footerColumns, footerIntro } from "@/data/footer";
+import { surfaces } from "@/theme";
 import { FooterColumn } from "./components/footer-column";
 import { Newsletter } from "./components/newsletter";
 import { PaymentMethods } from "./components/payment-methods";
 import { SocialLinks } from "./components/social-links";
 
-const FOOTER_BACKGROUND = "#f0f0f0";
 const NEWSLETTER_OVERLAP = { base: "9rem", lg: "5.5rem" } as const;
 const NEWSLETTER_PULL = { base: "-9rem", lg: "-5.5rem" } as const;
 
@@ -17,7 +17,7 @@ export function Footer() {
       <PageContainer position="relative">
         <Newsletter />
       </PageContainer>
-      <Box bg={FOOTER_BACKGROUND} mt={NEWSLETTER_PULL} pt={NEWSLETTER_OVERLAP}>
+      <Box bg={surfaces.panel} mt={NEWSLETTER_PULL} pt={NEWSLETTER_OVERLAP}>
         <PageContainer pt="12" pb="20">
           <Grid columns={{ base: "2", lg: "5" }} columnGap={{ base: "4", lg: "10" }} rowGap="6">
             <GridItem colSpan={{ base: "2", lg: "1" }}>
