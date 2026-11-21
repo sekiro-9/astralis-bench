@@ -1,0 +1,15 @@
+{
+  "name": "astralis-bench",
+  "private": true,
+  "type": "module",
+  "description": "Benchmarks comparing Astralis UI with other React component libraries",
+  "scripts": {
+    "bench:simple": "node simple-bench/run.mjs",
+    "bench:shop": "node ecommerce/run.mjs bench",
+    "shop": "node ecommerce/run.mjs serve"
+  },
+  "devDependencies": {
+    "playwright": "1.60.0"
+  },
+  "packageManager": "pnpm@10.28.0"
+}
