@@ -12,7 +12,7 @@ export function Navbar() {
     <>
       <AnnouncementBar />
       <Box as="header" bg="base">
-        <PageContainer py={{ base: "5", lg: "6" }}>
+        <PageContainer py="4">
           <Flex alignItems="center" gap={{ base: "4", lg: "10" }}>
             <HStack gap="4">
               <Box display={{ base: "block", lg: "hidden" }}>
