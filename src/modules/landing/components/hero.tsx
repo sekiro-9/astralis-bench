@@ -6,11 +6,12 @@ import { hero } from "@/data/landing";
 import { HeroStats } from "./hero-stats";
 
 const HERO_BACKGROUND = "#f2f0f1";
+const HERO_GUTTER = { base: "4", md: "8", lg: "16", xl: "7rem" } as const;
 
 export function Hero() {
   return (
     <Box as="section" bg={HERO_BACKGROUND} overflow="hidden">
-      <PageContainer>
+      <PageContainer maxW="80rem" px={HERO_GUTTER}>
         <Grid columns={{ base: "1", lg: "12" }} gap="0">
           <GridItem colSpan={{ base: "1", lg: "7" }}>
             <Stack
@@ -22,7 +23,7 @@ export function Hero() {
                 as="h1"
                 size={{ base: "4xl", lg: "5xl", xl: "6xl" }}
                 weight="extrabold"
-                lineHeight="none"
+                lineHeight="tight"
                 casing="uppercase"
                 maxW="11em"
               >
