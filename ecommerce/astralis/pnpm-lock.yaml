@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       astralis-ui:
-        specifier: ^0.10.0
-        version: 0.10.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: ^0.11.0
+        version: 0.11.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       next:
         specifier: 16.4.6
         version: 16.4.6(@babel/core@7.29.13)(@types/node@20.19.43)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -700,6 +700,13 @@ packages:
 
   astralis-ui@0.10.0:
     resolution: {integrity: sha512-KWouJK8DfUEncNYptr+9d8uHGftJpz5zdJ1XWZalqABrPKC77ODkEU9OMPFi4oygtEJNz8vP2maYJQQmxUs2Kw==}
+    engines: {node: '>=20.9'}
+    peerDependencies:
+      react: ^19.1.1
+      react-dom: ^19.1.1
+
+  astralis-ui@0.11.0:
+    resolution: {integrity: sha512-NFFQ1yFT/bNtdanWuzdt+i4lmdtJrK/e+tFllFvnIFBUbsDJGAEKazyAfcuHJhevT1vlU3gancwPC8iqo4T08A==}
     engines: {node: '>=20.9'}
     peerDependencies:
       react: ^19.1.1
@@ -2465,6 +2472,14 @@ snapshots:
       - react-dom
 
   astralis-ui@0.10.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
+    dependencies:
+      class-variance-authority: 0.7.1
+      clsx: 2.1.1
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
+      tailwind-merge: 3.7.1
+
+  astralis-ui@0.11.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
     dependencies:
       class-variance-authority: 0.7.1
       clsx: 2.1.1
