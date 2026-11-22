@@ -15,13 +15,19 @@ Edge; elsewhere run `pnpm exec playwright install chromium` once.
 
 ```
 pnpm install
-pnpm bench:simple          # build the simple-bench apps, print and save the table
+pnpm simple                # serve every simple-bench app (production builds), print the links
+pnpm bench:simple          # build the simple-bench apps, measure, print and save the tables
 pnpm shop                  # serve every shop app (production builds), print the links
 pnpm bench:shop            # rebuild, serve, measure desktop and phone, save the results
 ```
 
+`pnpm simple` serves the bare Next.js app on http://localhost:3100 and
+Astralis, shadcn/ui, Radix Themes, MUI and Chakra UI on ports 3101 to 3105.
 `pnpm shop` serves Astralis on http://localhost:3301, Chakra UI on
 http://localhost:3401 and MUI on http://localhost:3501, to compare by eye.
 
 Each app keeps its own lockfile and installs on its own, as a real project
 would; nothing is shared between apps except the measuring scripts.
+
+Each results file explains every column under its tables, and the best value
+in each column or row is shown in bold (green in the terminal).

@@ -22,10 +22,12 @@ real server-component boundaries should ship (close to) only the Menu's JS.
 ## Layout
 
 - `pages/` — committed page sources, one per library flavor.
-- `measure.mjs` — runs `next build` in each app under `apps/` and computes
-  First Load JS from the prerendered page.
-- `run.mjs` — installs any app that has no dependencies yet (`npm ci`), runs
-  `measure.mjs` and saves the table to `results/simple-bench.md`.
+- `run.mjs` — `pnpm simple` serves every app's production build on its own
+  port; `pnpm bench:simple` installs any app with no dependencies yet
+  (`npm ci`), builds each app fresh, prints the tables and saves them with an
+  explanation of every column to `results/simple-bench.md`.
+- `measure.mjs` — runs `next build` in an app and computes First Load JS from
+  the prerendered page.
 - `apps/<lib>/` — one Next app per library. Their sources and lockfiles are
   committed; `node_modules` and `.next` are not.
   Each app's `src/app/page.tsx` is a copy of `pages/<lib>.tsx`.
@@ -36,9 +38,21 @@ real server-component boundaries should ship (close to) only the Menu's JS.
 ## Running
 
 ```
-pnpm bench:simple                 # from the repo root: every app
-pnpm bench:simple astralis mui    # some apps
+pnpm simple                       # from the repo root: serve every app, print the links
+pnpm bench:simple                 # build and measure every app
+pnpm bench:simple astralis mui    # some apps (the bare Next.js app is always measured)
 ```
+
+`pnpm simple` serves each page to look at:
+
+| App | Link |
+| --- | --- |
+| Bare Next.js | http://localhost:3100 |
+| Astralis | http://localhost:3101 |
+| shadcn/ui | http://localhost:3102 |
+| Radix Themes | http://localhost:3103 |
+| MUI | http://localhost:3104 |
+| Chakra UI | http://localhost:3105 |
 
 Results are saved to [results/simple-bench.md](../results/simple-bench.md).
 
