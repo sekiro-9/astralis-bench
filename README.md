@@ -7,6 +7,7 @@ other React component libraries, on production builds. Two benches:
 |---|---|---|---|
 | [simple-bench](simple-bench/README.md) | One mostly-static page (hero, stats, cards, table, footer, one menu) in Astralis, Chakra UI, MUI, Radix and shadcn/ui, plus a bare Next.js app | First Load JS: the JavaScript a first visit downloads | [results/simple-bench.md](results/simple-bench.md) |
 | [ecommerce](ecommerce/README.md) | A full shop landing page from one Figma design, in Astralis, Chakra UI and MUI | What a visitor experiences: JS, CSS and HTML size, script and main-thread time, blocking time, first and largest paint, on a desktop and a throttled phone | [results/shop.md](results/shop.md) |
+| [css-bench](css-bench/README.md) | Nothing to build: the published stylesheets of the precompiled-CSS libraries (Mantine, Astryx, Radix Themes, Carbon) and Astralis | Stylesheet size minified, gzip and brotli, and the CSS one simple-bench page loads | [results/css-bench.md](results/css-bench.md) |
 
 ## Run it
 
@@ -19,6 +20,7 @@ pnpm simple                # serve every simple-bench app (production builds), p
 pnpm bench:simple          # build the simple-bench apps, measure, print and save the tables
 pnpm shop                  # serve every shop app (production builds), print the links
 pnpm bench:shop            # rebuild, serve, measure desktop and phone, save the results
+pnpm bench:css             # measure the precompiled libraries' stylesheets, save the results
 ```
 
 `pnpm simple` serves the bare Next.js app on http://localhost:3100 and

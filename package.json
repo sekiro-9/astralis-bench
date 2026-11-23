@@ -7,7 +7,8 @@
     "simple": "node simple-bench/run.mjs serve",
     "bench:simple": "node simple-bench/run.mjs bench",
     "shop": "node ecommerce/run.mjs serve",
-    "bench:shop": "node ecommerce/run.mjs bench"
+    "bench:shop": "node ecommerce/run.mjs bench",
+    "bench:css": "node css-bench/run.mjs"
   },
   "devDependencies": {
     "playwright": "1.60.0"
